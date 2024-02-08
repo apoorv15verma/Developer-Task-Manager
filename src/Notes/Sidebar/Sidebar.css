@@ -1,0 +1,44 @@
+body {
+  display: flex;
+}
+
+/* Sidebar container on the left */
+.Sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Sidebar image styling */
+.Sidebar img {
+  width: 60px;
+  cursor: pointer;
+}
+
+/* Sidebar list container */
+.sidebar_list {
+  display: flex;
+  flex-direction: row; /* Change to row for horizontal layout */
+  gap: 20px;
+  align-items: center;
+  width: 0;
+  transition: width 300ms ease; /* Use width for horizontal expansion */
+}
+
+/* Active state for expanding the sidebar list */
+.sidebar_list_active {
+  width: 300px; /* Adjust the width based on your design */
+}
+
+/* Individual sidebar list item styling */
+.sidebar_list_item {
+  border-radius: 50%;
+  height: 24px;
+  width: 24px;
+  list-style: none;
+}
+
+/* Other UI container on the right */
+.otherUI {
+  /* Add styling for the other UI elements on the right */
+}

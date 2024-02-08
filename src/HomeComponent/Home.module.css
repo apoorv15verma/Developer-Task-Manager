@@ -1,0 +1,37 @@
+/* home.module.css */
+
+.home {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap; /* Allow flex items to wrap onto multiple lines */
+    margin: 20px;
+  }
+  
+  .card {
+    background-color: #4caf50; /* Green color */
+    border-radius: 8px;
+     text-decoration: none;
+    padding: 20px;
+    width: 200px;
+    margin: 10px; /* Add some margin between cards */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  
+    &:hover {
+      transform: scale(1.05);
+    }
+  
+    h2 {
+      color: #fff; /* White text color */
+      margin-bottom: 10px;
+      text-decoration: none;
+    }
+  
+    p {
+      text-decoration: none;
+      color: #e0e0e0; /* Light gray text color */
+    }
+  }
+  
