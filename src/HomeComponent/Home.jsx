@@ -30,23 +30,23 @@ const Home = () => {
     <>
       <h1>Welcome, {mainuser}</h1>
 
-      <div className={styles.home}>
+      <div className="home">
         <Link to="/resumeApp">
-          <div className={styles.card}>
+          <div className="card">
             <h2 className="fw-semibold">Resume App</h2>
             <p>Make your Job Ready Resume.</p>
           </div>
         </Link>
 
         <Link to="/todoApp">
-          <div className={styles.card}>
+          <div className="card">
             <h2>Todo App</h2>
             <p>Make your Todo list.</p>
           </div>
         </Link>
 
         <Link to="/notesApp">
-          <div className={styles.card}>
+          <div className="card">
             <h2>Notes App</h2>
             <p>Make Yor Notes.</p>
           </div>
