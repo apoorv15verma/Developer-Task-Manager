@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import styles from "./home.module.css";
+import './Home.css'
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "../firebase";
 

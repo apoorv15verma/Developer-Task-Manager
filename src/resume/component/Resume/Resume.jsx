@@ -10,7 +10,7 @@ import {
   Phone,
 } from "react-feather";
 
-import styles from "./Resume.module.css";
+import  "./resume.css";
 
 const Resume = forwardRef((props, ref) => {
   const information = props.information;
