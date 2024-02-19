@@ -12,6 +12,10 @@ import ResumeApp from './resume/resumeApp.jsx'
 import TodoApp from './todo/todoApp.jsx'
 import NotesApp from './Notes/notesApp.jsx'
 
+
+import SignupAuth from './Auth/SignupAuth.jsx'
+
+
 const router = createBrowserRouter([
   {
     path: '/',
@@ -19,7 +23,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "",
-        element: <Auth />
+        element: <HomeComp />
       },
       {
         path: "login",
@@ -45,6 +49,13 @@ const router = createBrowserRouter([
         path: "notesApp",
         element: <NotesApp />
       },
+     
+      {
+        path: "SignupAuth",
+        element: <SignupAuth />
+      },
+      
+      
     ]
   }
 ])

@@ -1,8 +1,12 @@
+.App{
+  min-height: 65vh;
+}
 .notesApp {
     height: 100vh;
     display: flex;
     gap: 20px;
     padding: 40px;
+    
   }
   
   .custom-scroll::-webkit-scrollbar {

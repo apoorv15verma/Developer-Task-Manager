@@ -9,31 +9,31 @@ import styles from "./Login.module.css";
 
 function Login() {
   const navigate = useNavigate();
-  const [values, setValues] = useState({
+  const [valuesLogIn, setValuesLogIn] = useState({
     email: "",
     pass: "",
   });
-  const [errorMsg, setErrorMsg] = useState("");
+  const [errorMsgLogIn, setErrorMsgLogIn] = useState("");
   const [submitButtonDisabled, setSubmitButtonDisabled] = useState(false);
 
   const handleSubmission = () => {
-    if (!values.email || !values.pass) {
-      setErrorMsg("Fill all fields");
+    if (!valuesLogIn.email || !valuesLogIn.pass) {
+      setErrorMsgLogIn("Fill all fields");
       return;
     }
-    setErrorMsg("");
+    setErrorMsgLogIn("");
 
     setSubmitButtonDisabled(true);
-    signInWithEmailAndPassword(auth, values.email, values.pass)
+    signInWithEmailAndPassword(auth, valuesLogIn.email, valuesLogIn.pass)
       .then(async (res) => {
         setSubmitButtonDisabled(false);
-        
+
         navigate("/homecomponent");
       })
       .catch((err) => {
         setSubmitButtonDisabled(false);
-        // setErrorMsg(err.message);
-        setErrorMsg("email or password is not correct");
+        // setErrorMsgLogIn(err.message);
+        setErrorMsgLogIn("email or password is not correct");
       });
   };
   return (
@@ -44,20 +44,20 @@ function Login() {
         <InputControl
           label="Email"
           onChange={(event) =>
-            setValues((prev) => ({ ...prev, email: event.target.value }))
+            setValuesLogIn((prev) => ({ ...prev, email: event.target.value }))
           }
           placeholder="Enter email address"
         />
         <InputControl
           label="Password"
           onChange={(event) =>
-            setValues((prev) => ({ ...prev, pass: event.target.value }))
+            setValuesLogIn((prev) => ({ ...prev, pass: event.target.value }))
           }
           placeholder="Enter Password"
         />
 
         <div className={styles.footer}>
-          <b className={styles.error}>{errorMsg}</b>
+          <b className={styles.error}>{errorMsgLogIn}</b>
           <button disabled={submitButtonDisabled} onClick={handleSubmission}>
             Login
           </button>

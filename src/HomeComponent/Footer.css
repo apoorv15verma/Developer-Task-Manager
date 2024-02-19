@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    /* min-height: 100vh; */
+  }
+  
+  .content {
+    /* Add styling for your main content area */
+    padding: 20px;
+    flex: 1; /* This ensures that the content takes up the remaining vertical space */
+  }
+  
+  .footer {
+    background-color: #171717;
+    color: #fff;
+    text-align: center;
+    padding: 1rem; /* You can adjust this padding to achieve a total height of 3rem */
+    width: 100%;
+    margin-top: auto; /* Push the footer to the bottom */
+    bottom:0 !important;
+  }
+  
